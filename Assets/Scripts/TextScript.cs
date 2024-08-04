@@ -7,7 +7,7 @@ using UnityEditor;
 using System.Runtime.CompilerServices;
 
 
-public class TextScript : MonoBehaviour
+public class TextScript : MonoBehaviour // componente della scritta "instructions" per fare l'effetto typewriter.
 {
 
     [SerializeField] public TextMeshProUGUI text;
