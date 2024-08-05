@@ -7,6 +7,8 @@ public class MenuFunctions : MonoBehaviour
 {
     public AudioSource clickSound;
     private bool clicked;
+
+
     public void LoadScene(int index)
     {
         if (index > 0)
@@ -40,5 +42,5 @@ public class MenuFunctions : MonoBehaviour
         Application.Quit();
     }
 
-    
+
 }
