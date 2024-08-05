@@ -91,22 +91,26 @@ public class StarshipController : MonoBehaviour
                 Destroy(tmpVFX, 2);
                 other.gameObject.SetActive(false);
                 shieldHp--;
-                if(shieldHp <= 5)
-                { 
-                    shieldMaterial.SetColor("Color_305775efeafa48798f3eddeead481b6f", new Color(0, 154, 191, 0) * shieldHp / 160);
+                if (shieldHp <= 5)
+                {
+                    shieldMaterial.SetColor("Color_305775efeafa48798f3eddeead481b6f",
+                        new Color(0, 154, 191, 0) * shieldHp / 160);
                 }
 
                 if (shieldHp <= 0)
                 {
                     shield.SetActive(false);
                 }
-            } 
+            }
             else
             {
                 GameObject tmpVFX = Instantiate(vfx, other.transform.position, Quaternion.identity);
                 Destroy(tmpVFX, 2);
                 hp--;
-                healthDown.Invoke();
+                if (hp < 5)
+                {
+                    healthDown.Invoke();
+                }
                 other.gameObject.SetActive(false);
                 if (hp <= 0)
                 {
@@ -122,7 +126,10 @@ public class StarshipController : MonoBehaviour
         else if (other.CompareTag("HPUp"))
         {
             strengthPowerUp.Invoke();
-            healthUp.Invoke();
+            if (hp < 6)
+            {
+                healthUp.Invoke();
+            }
         }
         else if (other.CompareTag("ShieldUp"))
         {
@@ -149,9 +156,10 @@ public class StarshipController : MonoBehaviour
     public void SetShield(int i)
     {
         shieldHp += i;
-        if(shieldHp <= 5)
+        if (shieldHp <= 5)
         {
-            shieldMaterial.SetColor("Color_305775efeafa48798f3eddeead481b6f", new Color(0, 154, 191, 0) * shieldHp / 160);
+            shieldMaterial.SetColor("Color_305775efeafa48798f3eddeead481b6f",
+                new Color(0, 154, 191, 0) * shieldHp / 160);
         }
     }
 }

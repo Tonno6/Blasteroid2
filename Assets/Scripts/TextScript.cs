@@ -9,18 +9,15 @@ using System.Runtime.CompilerServices;
 
 public class TextScript : MonoBehaviour // componente della scritta "instructions" per fare l'effetto typewriter.
 {
-
-    [SerializeField] public TextMeshProUGUI text;
-    [SerializeField] float delay;
-    [SerializeField] float startWriting;
+    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private float delay;
+    [SerializeField] private float startWriting;
 
     private int maxCharacters;
-    private int currentCharacter;
 
 
     private void Start()
     {
-        currentCharacter = 0;
         text.maxVisibleCharacters = 0;
         StartCoroutine(StartWriting());
     }
@@ -29,20 +26,15 @@ public class TextScript : MonoBehaviour // componente della scritta "instruction
     {
         yield return new WaitForSeconds(startWriting);
         text.gameObject.SetActive(true);
-        StartCoroutine(TyperwriterEffect());
-        
+        StartCoroutine(TypewriterEffect());
     }
-    
-    private IEnumerator TyperwriterEffect()
+
+    private IEnumerator TypewriterEffect()
     {
-        
         while (text.maxVisibleCharacters < text.ToString().Length + 1)
         {
             text.maxVisibleCharacters++;
             yield return new WaitForSeconds(delay);
         }
-
     }
-
-
 }

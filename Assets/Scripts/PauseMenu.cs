@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameplayGUI;
     [SerializeField] private bool isDead;
+    [SerializeField] private bool isViable;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class PauseMenu : MonoBehaviour
             gameplayGUI.SetActive(true);
             Time.timeScale = 1;
         }
-        else if (!isDead)
+        else if (!isDead && isViable)
         {
             pauseMenu.SetActive(true);
             gameplayGUI.SetActive(false);
@@ -38,5 +39,15 @@ public class PauseMenu : MonoBehaviour
     public void SetIsDead()
     {
         isDead = true;
+    }
+
+    public void SetIsViable()
+    {
+        isViable = true;
+    }
+    
+    public void SetIsUnviable()
+    {
+        isViable = false;
     }
 }
