@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class MainMenuFadeAway : MonoBehaviour
 {
-    [SerializeField] private Image titleFrame;
-    [SerializeField] private Image buttonFrame;
+    [SerializeField] private List<Image> imageList;
+    [SerializeField] private TMP_Text instructionsText;
     private float tmpColor;
 
     private void Start()
@@ -32,8 +32,10 @@ public class MainMenuFadeAway : MonoBehaviour
     IEnumerator FadeAway()
     {
         tmpColor -= 0.05f;
-        titleFrame.color = new Color(titleFrame.color.r, titleFrame.color.g, titleFrame.color.b, tmpColor);
-        buttonFrame.color = new Color(buttonFrame.color.r, buttonFrame.color.g, buttonFrame.color.b, tmpColor);
+        foreach (Image tmpImage in imageList)
+        {
+            tmpImage.color = new Color(tmpImage.color.r, tmpImage.color.g, tmpImage.color.b, tmpColor);
+        }
         yield return new WaitForSeconds(0.03f);
         if (tmpColor >= 0)
         {
@@ -44,8 +46,11 @@ public class MainMenuFadeAway : MonoBehaviour
     IEnumerator FadeIn()
     {
         tmpColor += 0.05f;
-        titleFrame.color = new Color(titleFrame.color.r, titleFrame.color.g, titleFrame.color.b, tmpColor);
-        buttonFrame.color = new Color(buttonFrame.color.r, buttonFrame.color.g, buttonFrame.color.b, tmpColor);
+        foreach (Image tmpImage in imageList)
+        {
+            tmpImage.color = new Color(tmpImage.color.r, tmpImage.color.g, tmpImage.color.b, tmpColor);
+        }
+        instructionsText.color = new Color(instructionsText.color.r, instructionsText.color.g, instructionsText.color.b, tmpColor);
         yield return new WaitForSeconds(0.03f);
         if (tmpColor <= 1)
         {

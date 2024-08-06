@@ -15,6 +15,7 @@ public class BulletManager : MonoBehaviour
     [SerializeField] private List<Bullet> activeBullet;
     [SerializeField] private SpawnableEvent ammunitionUsed;
     [SerializeField] private SpawnableEvent ammunitionReloaded;
+    [SerializeField] private SpawnableEvent overheat;
     private Queue<Bullet> inactiveBullet;
     private bool isDead;
     private bool delay;
@@ -84,6 +85,7 @@ public class BulletManager : MonoBehaviour
 
     private IEnumerator ReloadTime()
     {
+        overheat.Invoke();
         yield return new WaitForSeconds(2);
         delay = false;
     }

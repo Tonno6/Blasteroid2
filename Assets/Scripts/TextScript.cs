@@ -31,7 +31,7 @@ public class TextScript : MonoBehaviour // componente della scritta "instruction
 
     private IEnumerator TypewriterEffect()
     {
-        while (text.maxVisibleCharacters < text.ToString().Length + 1)
+        while (text.maxVisibleCharacters < text.textInfo.characterCount)
         {
             text.maxVisibleCharacters++;
             yield return new WaitForSeconds(delay);

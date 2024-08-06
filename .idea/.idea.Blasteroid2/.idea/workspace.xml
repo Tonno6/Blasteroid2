@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea18903-5c6e-46f7-b4c6-191c6cee49e6" name="Modifiche" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/MAT_Shader_PowerUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/MAT_Shader_PowerUp.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuOFFICIAL.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuOFFICIAL.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuFadeAway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuFadeAway.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +32,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Collega a Unity Editor.Associa a Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "LuBranch",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,10 +68,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Associa a Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Associa a Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5516">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5516" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -101,6 +99,7 @@
       <updated>1722847381323</updated>
       <workItem from="1722847383753" duration="657000" />
       <workItem from="1722854742729" duration="6486000" />
+      <workItem from="1722942772654" duration="3390000" />
     </task>
     <servers />
   </component>

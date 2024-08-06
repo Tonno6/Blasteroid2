@@ -1282,7 +1282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &278864862
 Transform:
   m_ObjectHideFlags: 0
@@ -3056,8 +3056,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601009e622a5c854f9bddf16cfccf4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleFrame: {fileID: 1873349453}
-  buttonFrame: {fileID: 1673042094}
+  imageList:
+  - {fileID: 1873349453}
+  - {fileID: 1673042094}
+  - {fileID: 205772292}
+  - {fileID: 206795146}
+  - {fileID: 514842529}
+  instructionsText: {fileID: 1889506181}
 --- !u!1 &704086380
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,6 +3747,7 @@ Transform:
   - {fileID: 1984893997}
   - {fileID: 1012534386}
   - {fileID: 1858439198}
+  - {fileID: 1052106780}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905051099
@@ -4491,8 +4497,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1780205501}
-        m_TargetAssemblyTypeName: HealthBarEnergy, Assembly-CSharp
-        m_MethodName: DisableHealthBar
+        m_TargetAssemblyTypeName: ImageBarCounter, Assembly-CSharp
+        m_MethodName: DisableImageBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4519,8 +4525,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1780205501}
-        m_TargetAssemblyTypeName: HealthBarEnergy, Assembly-CSharp
-        m_MethodName: EnableHealthBar
+        m_TargetAssemblyTypeName: ImageBarCounter, Assembly-CSharp
+        m_MethodName: EnableImageBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4745,6 +4751,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039263507}
   m_CullTransparentMesh: 1
+--- !u!1 &1052106779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052106780}
+  - component: {fileID: 1052106781}
+  m_Layer: 0
+  m_Name: Overheat Event
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1052106780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052106779}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 900521836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052106781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052106779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4c4ed6c66a80647b1c792aad346b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventInvoked: {fileID: 11400000, guid: f653eeb10c35d95439e92812ce1455db, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1780205501}
+        m_TargetAssemblyTypeName: ImageBarCounter, Assembly-CSharp
+        m_MethodName: OverheatImageBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1232855734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,6 +5076,7 @@ MonoBehaviour:
   activeBullet: []
   ammunitionUsed: {fileID: 11400000, guid: 8e4bf6b7389f8dc48a423db8592459d8, type: 2}
   ammunitionReloaded: {fileID: 11400000, guid: e23f985a32ce4aa4a8a2913a0c327634, type: 2}
+  overheat: {fileID: 11400000, guid: f653eeb10c35d95439e92812ce1455db, type: 2}
 --- !u!4 &1369282455
 Transform:
   m_ObjectHideFlags: 0
@@ -6382,6 +6449,7 @@ GameObject:
   - component: {fileID: 1641081809}
   - component: {fileID: 1641081812}
   - component: {fileID: 1641081811}
+  - component: {fileID: 1641081813}
   m_Layer: 5
   m_Name: InstructionsText2
   m_TagString: Untagged
@@ -6509,6 +6577,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641081808}
   m_CullTransparentMesh: 1
+--- !u!114 &1641081813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641081808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897635a782499f243aea350929efa326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1641081811}
+  delay: 0.05
+  startWriting: 0.5
 --- !u!1 &1673042091
 GameObject:
   m_ObjectHideFlags: 0
@@ -7040,8 +7123,6 @@ GameObject:
   - component: {fileID: 1858439198}
   - component: {fileID: 1858439200}
   - component: {fileID: 1858439199}
-  - component: {fileID: 1858439202}
-  - component: {fileID: 1858439201}
   m_Layer: 0
   m_Name: Health Event
   m_TagString: Untagged
@@ -7081,8 +7162,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834952334}
-        m_TargetAssemblyTypeName: HealthBarEnergy, Assembly-CSharp
-        m_MethodName: DisableHealthBar
+        m_TargetAssemblyTypeName: ImageBarCounter, Assembly-CSharp
+        m_MethodName: DisableImageBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7109,65 +7190,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834952334}
-        m_TargetAssemblyTypeName: HealthBarEnergy, Assembly-CSharp
-        m_MethodName: EnableHealthBar
+        m_TargetAssemblyTypeName: ImageBarCounter, Assembly-CSharp
+        m_MethodName: EnableImageBar
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1858439201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858439197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec4c4ed6c66a80647b1c792aad346b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventInvoked: {fileID: 11400000, guid: 9a9b5bbddd3950e4ca71485f968bf1e0, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1834952334}
-        m_TargetAssemblyTypeName: HealthBarEnergy, Assembly-CSharp
-        m_MethodName: SetExtraHp
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1858439202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858439197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec4c4ed6c66a80647b1c792aad346b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventInvoked: {fileID: 11400000, guid: 1dead62036e728a45b7a996e39a5766d, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1834952334}
-        m_TargetAssemblyTypeName: HealthBarEnergy, Assembly-CSharp
-        m_MethodName: SetExtraHp
-        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7470,7 +7495,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889506179}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 897635a782499f243aea350929efa326, type: 3}
   m_Name: 
@@ -7928,6 +7953,7 @@ GameObject:
   - component: {fileID: 2059851575}
   - component: {fileID: 2059851578}
   - component: {fileID: 2059851577}
+  - component: {fileID: 2059851579}
   m_Layer: 5
   m_Name: PowerUpsText
   m_TagString: Untagged
@@ -8042,7 +8068,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -322.47235, y: -22.44133, z: -78.33174, w: -223.8335}
+  m_margin: {x: -322.47235, y: -22.44133, z: -220.51558, w: -269.83203}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8056,6 +8082,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059851574}
   m_CullTransparentMesh: 1
+--- !u!114 &2059851579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059851574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897635a782499f243aea350929efa326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2059851577}
+  delay: 0.05
+  startWriting: 0.5
 --- !u!1 &2107639798
 GameObject:
   m_ObjectHideFlags: 0
