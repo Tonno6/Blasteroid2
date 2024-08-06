@@ -1,10 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
-using System.Runtime.CompilerServices;
 
 
 public class TextScript : MonoBehaviour // componente della scritta "instructions" per fare l'effetto typewriter.

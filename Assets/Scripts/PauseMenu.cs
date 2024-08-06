@@ -31,7 +31,33 @@ public class PauseMenu : MonoBehaviour
         else if (!isDead && isViable)
         {
             pauseMenu.SetActive(true);
-            gameplayGUI.SetActive(false);
+            foreach (Transform child in gameplayGUI.transform)
+            {
+                if (child.name != "Ammunition")
+                {
+                    child.gameObject.SetActive(false);
+                }
+                else
+                {
+                    foreach (Transform grandchild in child.transform)
+                    {
+                        if (grandchild.name != "AmmoBarCounter")
+                        {
+                            grandchild.gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            Transform tmp = child.Find("AmmoBarCounter");
+                            foreach (Transform greatgrandchild in tmp)
+                            {
+                                greatgrandchild.gameObject.SetActive(false);
+                            }
+                        }
+                    }
+                }
+            }
+
+            //gameplayGUI.SetActive(false);
             Time.timeScale = 0;
         }
     }
@@ -45,7 +71,7 @@ public class PauseMenu : MonoBehaviour
     {
         isViable = true;
     }
-    
+
     public void SetIsUnviable()
     {
         isViable = false;

@@ -19,6 +19,7 @@ public class BulletManager : MonoBehaviour
     private Queue<Bullet> inactiveBullet;
     private bool isDead;
     private bool delay;
+    private bool canShoot;
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class BulletManager : MonoBehaviour
 
     private void OnFireStarted(InputAction.CallbackContext context)
     {
-        if(delay == false)
+        if(delay == false && canShoot)
         {
             Shoot();
         }
@@ -93,5 +94,10 @@ public class BulletManager : MonoBehaviour
     public void SetDeath()
     {
         isDead = true;
+    }
+
+    public void CanShoot(bool tmp)
+    {
+        canShoot = tmp;
     }
 }
