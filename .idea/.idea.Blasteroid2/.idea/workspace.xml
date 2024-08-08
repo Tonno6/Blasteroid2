@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea18903-5c6e-46f7-b4c6-191c6cee49e6" name="Modifiche" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighscoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighscoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuFunctions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonInstruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageTextActivator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonInstruction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageTextActivator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +103,7 @@
       <workItem from="1722854742729" duration="6486000" />
       <workItem from="1722942772654" duration="3390000" />
       <workItem from="1722967660423" duration="2262000" />
+      <workItem from="1723109764027" duration="4108000" />
     </task>
     <servers />
   </component>

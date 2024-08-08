@@ -16,6 +16,7 @@ public class BulletManager : MonoBehaviour
     [SerializeField] private SpawnableEvent ammunitionUsed;
     [SerializeField] private SpawnableEvent ammunitionReloaded;
     [SerializeField] private SpawnableEvent overheat;
+    private PlayerInput input;
     private Queue<Bullet> inactiveBullet;
     private bool isDead;
     private bool delay;
@@ -34,13 +35,13 @@ public class BulletManager : MonoBehaviour
             ammunitionReloaded.Invoke();
         }
 
-        PlayerInput input = FindObjectOfType<PlayerInput>();
+        input = FindObjectOfType<PlayerInput>();
         input.actions["Fire"].started += OnFireStarted;
     }
 
     private void OnFireStarted(InputAction.CallbackContext context)
     {
-        if(delay == false && canShoot)
+        if (delay == false && canShoot)
         {
             Shoot();
         }
@@ -59,8 +60,8 @@ public class BulletManager : MonoBehaviour
         else
         {
             delay = true;
-            StartCoroutine(ReloadTime());  
-        }   
+            StartCoroutine(ReloadTime());
+        }
     }
 
     private void Update()
@@ -94,6 +95,7 @@ public class BulletManager : MonoBehaviour
     public void SetDeath()
     {
         isDead = true;
+        input.actions["Fire"].started -= OnFireStarted;
     }
 
     public void CanShoot(bool tmp)
