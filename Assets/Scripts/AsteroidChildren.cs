@@ -10,10 +10,10 @@ public class AsteroidChildren : MonoBehaviour
     private int hp;
 
 
-    private void Start()
+    public void Init(int i)
     {
-        totalHp = asteroid.GetHp();
-        hp = totalHp;
+        totalHp = i;
+        hp = i;
     }
 
     private void OnTriggerEnter(Collider other)

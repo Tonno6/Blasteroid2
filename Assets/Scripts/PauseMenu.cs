@@ -21,9 +21,9 @@ public class PauseMenu : MonoBehaviour
     {
         input = FindObjectOfType<PlayerInput>();
         input.actions["Menu"].started += OnMenuPerformed;
-        pauseMenu.SetActive(false);
         imageTextActivator.ImageList = imageList;
         imageTextActivator.TextList = textList;
+        pauseMenu.SetActive(false);
     }
 
     private void OnMenuPerformed(InputAction.CallbackContext context)
@@ -53,13 +53,8 @@ public class PauseMenu : MonoBehaviour
         input.actions["Menu"].started -= OnMenuPerformed;
     }
 
-    public void SetIsViable()
+    public void SetIsViable(bool tmp)
     {
-        isViable = true;
-    }
-
-    public void SetIsUnviable()
-    {
-        isViable = false;
+        isViable = tmp;
     }
 }

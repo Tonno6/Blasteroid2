@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,13 @@ public class ImageBarCounter : MonoBehaviour
 {
     [SerializeField] private List<Image> imageBarCounterList;
     private List<Image> disabledImageBarCounterList = new List<Image>();
+    private int shield;
+    private Color defaultColor;
+
+    public void Start()
+    {
+        defaultColor = imageBarCounterList[0].color;
+    }
 
     public void DisableImageBar()
     {
@@ -27,6 +35,21 @@ public class ImageBarCounter : MonoBehaviour
         disabledImageBarCounterList.RemoveAt(0);
     }
 
+    public void EnableShieldImageBar()
+    {
+        shield++;
+        for (int i = 0; i < shield; i++)
+        {
+            imageBarCounterList[i].color = Color.green;
+        }
+    }
+
+    public void DisableShieldImageBar()
+    {
+        shield--;
+        imageBarCounterList[shield].color = defaultColor;
+    }
+
     public void OverheatImageBar()
     {
         StartCoroutine(Overheat());
@@ -35,27 +58,27 @@ public class ImageBarCounter : MonoBehaviour
     IEnumerator Overheat()
     {
         List<Color> tmpColorList = new List<Color>();
-        
+
         foreach (Image tmpImage in imageBarCounterList)
         {
             tmpColorList.Add(tmpImage.color);
             tmpImage.color = Color.red;
         }
-        
+
         foreach (Image tmpImage in disabledImageBarCounterList)
         {
             tmpColorList.Add(tmpImage.color);
             tmpImage.color = Color.red;
         }
-        
+
         yield return new WaitForSeconds(2);
-        
+
         foreach (Image tmpImage in imageBarCounterList)
         {
             tmpImage.color = tmpColorList.First();
             tmpColorList.RemoveAt(0);
         }
-        
+
         foreach (Image tmpImage in disabledImageBarCounterList)
         {
             tmpImage.color = tmpColorList.First();

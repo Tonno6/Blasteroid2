@@ -60,10 +60,9 @@ public class AsteroidManager : MonoBehaviour
             {
                 asteroid.gameObject.SetActive(true);
                 asteroid.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                asteroid.SetDifficultyLevel(difficultyLevel);
                 activeAsteroids.Add(asteroid);
                 asteroid.transform.position = GetRandomSpawnPoint() + transform.position;
-                asteroid.Init();
+                asteroid.Init(difficultyLevel);
             }
             nextSpawnTime = Time.time + Random.Range(spawnIntervalRange.x, spawnIntervalRange.y);
         }

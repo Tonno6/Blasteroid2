@@ -6,12 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea18903-5c6e-46f7-b4c6-191c6cee49e6" name="Modifiche" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/StarshipInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/StarshipInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/MAT_Shader_PowerUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/MAT_Shader_PowerUp.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AsteroidContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AsteroidContainer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Asteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Asteroid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AsteroidChildren.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AsteroidChildren.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AsteroidManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AsteroidManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonInstruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageTextActivator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonInstruction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageTextActivator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventScript/PowerUpEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventScript/PowerUpEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +30,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CloseButtonInstruction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0b7b90d34a54066a7234dad6925511646ac00/9f/900d2864/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -70,10 +79,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Associa a Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Associa a Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8968">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8968" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -104,6 +113,8 @@
       <workItem from="1722942772654" duration="3390000" />
       <workItem from="1722967660423" duration="2262000" />
       <workItem from="1723109764027" duration="4108000" />
+      <workItem from="1723980036503" duration="1653000" />
+      <workItem from="1724055149509" duration="4132000" />
     </task>
     <servers />
   </component>

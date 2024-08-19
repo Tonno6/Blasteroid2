@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class StarshipController : MonoBehaviour
 {
@@ -13,8 +14,10 @@ public class StarshipController : MonoBehaviour
     [SerializeField] private SpawnableEvent speedPowerUp;
     [SerializeField] private SpawnableEvent strengthPowerUp;
     [SerializeField] private SpawnableEvent shieldPowerUp;
+    [SerializeField] private SpawnableEvent shieldDown;
     [SerializeField] private SpawnableEvent healthUp;
     [SerializeField] private SpawnableEvent healthDown;
+    [SerializeField] private SpawnableEvent score;
     [SerializeField] private Vector3 target;
     [SerializeField] private GameObject vfx;
     [SerializeField] private GameObject shield;
@@ -90,6 +93,7 @@ public class StarshipController : MonoBehaviour
                 Destroy(tmpVFX, 2);
                 other.gameObject.SetActive(false);
                 shieldHp--;
+                shieldDown.Invoke();
                 if (shieldHp <= 5)
                 {
                     shieldMaterial.SetColor("Color_305775efeafa48798f3eddeead481b6f",
@@ -124,16 +128,27 @@ public class StarshipController : MonoBehaviour
         }
         else if (other.CompareTag("HPUp"))
         {
-            strengthPowerUp.Invoke();
-            if (hp < 6)
+            if (hp < 5)
             {
+                strengthPowerUp.Invoke();
                 healthUp.Invoke();
+            }
+            else
+            {
+                score.Invoke();
             }
         }
         else if (other.CompareTag("ShieldUp"))
         {
-            shieldPowerUp.Invoke();
-            RenderShield();
+            if (shieldHp < hp)
+            {
+                shieldPowerUp.Invoke();
+                RenderShield();
+            }
+            else
+            {
+                score.Invoke();
+            }
         }
     }
 

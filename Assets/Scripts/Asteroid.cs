@@ -7,18 +7,16 @@ public class Asteroid : MonoBehaviour
     [SerializeField] private float tumble;
     [SerializeField] private int hp = 1;
     [SerializeField] private float difficultyLevel;
+    [SerializeField] private AsteroidChildren children;
     private float fallSpeed;
+    private float size;
 
-    public void Init()
+    public void Init(float tmpDifficultyLevel)
     {
-        float size = Random.Range(sizeRange.x, sizeRange.y);
-        fallSpeed = -Random.Range(fallSpeedRange.x, fallSpeedRange.y);
-        transform.localScale = new Vector3(size, size, size);
-        hp = (int)((size * 2) + difficultyLevel);
-        if (hp >= 10)
-        {
-            hp = 10;
-        }
+        SetDifficultyLevel(tmpDifficultyLevel);
+        SetFallingSpeed();
+        SetHp();
+        children.Init(hp);
     }
 
     private void Start()
@@ -31,13 +29,24 @@ public class Asteroid : MonoBehaviour
         transform.Translate(0, fallSpeed * Time.deltaTime, 0);
     }
 
-    public void SetDifficultyLevel(float i)
+    private void SetDifficultyLevel(float tmpDifficultyLevel)
     {
-        difficultyLevel += i;
+        difficultyLevel = tmpDifficultyLevel;
     }
 
-    public int GetHp()
+    private void SetFallingSpeed()
     {
-        return hp;
+        fallSpeed = -Random.Range(fallSpeedRange.x, fallSpeedRange.y);
+        size = Random.Range(sizeRange.x, sizeRange.y);
+        transform.localScale = new Vector3(size, size, size);
+    }
+
+    private void SetHp()
+    {
+        hp = (int)((size * 2) + difficultyLevel);
+        if (hp >= 10)
+        {
+            hp = 10;
+        }
     }
 }
