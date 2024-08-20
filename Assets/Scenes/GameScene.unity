@@ -1945,6 +1945,8 @@ Transform:
   m_Children:
   - {fileID: 817854298}
   - {fileID: 718036004}
+  - {fileID: 1304479543}
+  - {fileID: 1056796257}
   - {fileID: 1369282455}
   - {fileID: 1554348391}
   - {fileID: 702296434}
@@ -2113,7 +2115,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3580,7 +3582,7 @@ GameObject:
   - component: {fileID: 718036004}
   - component: {fileID: 718036003}
   m_Layer: 0
-  m_Name: Asteroid Manager
+  m_Name: Asteroid Manager_Dx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3598,12 +3600,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d807d1a6727f440ba690130b7e950e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidNumber: 20
-  asteroidKillHeight: -10
+  asteroidNumber: 40
+  asteroidKillHeight: -12
   asteroidPrefab:
   - {fileID: 7529845832603308838, guid: 9a9638eef521ac3459d113cd7f272cde, type: 3}
-  spawnIntervalRange: {x: 0.25, y: 1}
-  spawnAreaHalfExtent: {x: 10, y: 0.5, z: 0}
+  spawnIntervalRange: {x: 0.05, y: 0.5}
+  spawnAreaHalfExtent: {x: 13, y: 0.5, z: 0}
   asteroidPool: []
   activeAsteroids: []
 --- !u!4 &718036004
@@ -3615,7 +3617,7 @@ Transform:
   m_GameObject: {fileID: 718036002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 16, z: 0}
+  m_LocalPosition: {x: 8, y: 11.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4725,7 +4727,7 @@ Transform:
   m_GameObject: {fileID: 919936723}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5711,6 +5713,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1056796256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056796257}
+  - component: {fileID: 1056796258}
+  m_Layer: 0
+  m_Name: Asteroid Manager_Sx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056796257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056796256}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8, y: 11.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300818191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1056796258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056796256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d807d1a6727f440ba690130b7e950e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidNumber: 40
+  asteroidKillHeight: -12
+  asteroidPrefab:
+  - {fileID: 7529845832603308838, guid: 9a9638eef521ac3459d113cd7f272cde, type: 3}
+  spawnIntervalRange: {x: 0.05, y: 0.5}
+  spawnAreaHalfExtent: {x: 13, y: 0.5, z: 0}
+  asteroidPool: []
+  activeAsteroids: []
 --- !u!1 &1161484290
 GameObject:
   m_ObjectHideFlags: 0
@@ -5914,6 +5968,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232855734}
   m_CullTransparentMesh: 1
+--- !u!1 &1304479542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1304479543}
+  - component: {fileID: 1304479544}
+  m_Layer: 0
+  m_Name: Asteroid Manager_C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1304479543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304479542}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 11.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300818191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304479544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304479542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d807d1a6727f440ba690130b7e950e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidNumber: 20
+  asteroidKillHeight: -12
+  asteroidPrefab:
+  - {fileID: 7529845832603308838, guid: 9a9638eef521ac3459d113cd7f272cde, type: 3}
+  spawnIntervalRange: {x: 0.25, y: 1}
+  spawnAreaHalfExtent: {x: 15, y: 0.5, z: 0}
+  asteroidPool: []
+  activeAsteroids: []
 --- !u!1 &1321769300
 GameObject:
   m_ObjectHideFlags: 0
@@ -10571,6 +10677,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 300818191}
     m_Modifications:
+    - target: {fileID: 935311125100943776, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.4100766
+      objectReference: {fileID: 0}
+    - target: {fileID: 935311125100943776, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.3346462
+      objectReference: {fileID: 0}
+    - target: {fileID: 935311125100943776, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0146865845
+      objectReference: {fileID: 0}
+    - target: {fileID: 935311125100943776, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -6.8526773
+      objectReference: {fileID: 0}
     - target: {fileID: 1124186886059352727, guid: cfcbd970a5a361648a34caa721b87ec9,
         type: 3}
       propertyPath: vfx
@@ -10611,6 +10737,41 @@ PrefabInstance:
       propertyPath: starshipChildren
       value: 
       objectReference: {fileID: 931140788827607968}
+    - target: {fileID: 1124186886059352727, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: loopDistanceHorizontal
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933176283278533590, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.216015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933176283278533590, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7263565
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933176283278533590, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.2160141
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933176283278533590, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933176283278533590, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933176283278533590, guid: cfcbd970a5a361648a34caa721b87ec9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4138311660352430268, guid: cfcbd970a5a361648a34caa721b87ec9,
         type: 3}
       propertyPath: m_LocalPosition.x

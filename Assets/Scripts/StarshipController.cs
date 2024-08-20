@@ -65,10 +65,10 @@ public class StarshipController : MonoBehaviour
             transform.position = new Vector3(leftLoopPoint.x, transform.position.y, 0);
         if (transform.position.x < -loopDistanceHorizontal)
             transform.position = new Vector3(rightLoopPoint.x, transform.position.y, 0);
-        if (transform.position.y > 15)
-            transform.position = new Vector3(transform.position.x, 15, 0);
-        if (transform.position.y < 0)
-            transform.position = new Vector3(transform.position.x, 0, 0);
+        if (transform.position.y > 16.5f)
+            transform.position = new Vector3(transform.position.x, 16.5f, 0);
+        if (transform.position.y < -2.5f)
+            transform.position = new Vector3(transform.position.x, -2.5f, 0);
 
         // Mathf.Lerp accetta valori da 0 a 1 per decidere che valore assegnare: 0 = -20, 0.5 = 0, 1 = 20.
         correctInput = (moveInput.x + 1) / 2;
