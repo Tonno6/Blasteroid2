@@ -11,6 +11,7 @@ public class StarshipController : MonoBehaviour
     [SerializeField] private float loopDistanceHorizontal;
     [SerializeField] private string obstacleTag = "Enemy";
     [SerializeField] private SpawnableEvent deathEvent;
+    [SerializeField] private SpawnableEvent hurtEvent;
     [SerializeField] private SpawnableEvent speedPowerUp;
     [SerializeField] private SpawnableEvent strengthPowerUp;
     [SerializeField] private SpawnableEvent shieldPowerUp;
@@ -18,6 +19,7 @@ public class StarshipController : MonoBehaviour
     [SerializeField] private SpawnableEvent healthUp;
     [SerializeField] private SpawnableEvent healthDown;
     [SerializeField] private SpawnableEvent score;
+    [SerializeField] private SpawnableEvent powerUpScore;
     [SerializeField] private Vector3 target;
     [SerializeField] private GameObject vfx;
     [SerializeField] private GameObject shield;
@@ -81,6 +83,7 @@ public class StarshipController : MonoBehaviour
     private void OnDeath()
     {
         gameObject.SetActive(false);
+        this.deathEvent.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -136,6 +139,7 @@ public class StarshipController : MonoBehaviour
             else
             {
                 score.Invoke();
+                this.powerUpScore.Invoke(); 
             }
         }
         else if (other.CompareTag("ShieldUp"))
@@ -148,6 +152,7 @@ public class StarshipController : MonoBehaviour
             else
             {
                 score.Invoke();
+                this.powerUpScore.Invoke();
             }
         }
     }

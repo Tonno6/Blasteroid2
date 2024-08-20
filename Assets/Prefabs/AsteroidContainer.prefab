@@ -203,5 +203,5 @@ MonoBehaviour:
   - {fileID: 8286351388116187319, guid: bbc4e7f506ccfcd4497bdc53dac47a3f, type: 3}
   - {fileID: 3784394316532840901, guid: b8c8617cb48a6974385998a8cf954f73, type: 3}
   asteroid: {fileID: 7529845832603308838}
-  totalHp: 0
-  hp: 0
+  audioCollision: {fileID: 11400000, guid: dabb04bfd77c9744aa2f81f6dea0adb2, type: 2}
+  audioDestroy: {fileID: 11400000, guid: 633359c8c42dc4f488ac9f93fceafe90, type: 2}

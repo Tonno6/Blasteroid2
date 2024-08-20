@@ -4,7 +4,9 @@ public class PowerUpEvent : MonoBehaviour
 {
     [SerializeField] private float destroyDelay;
     [SerializeField] private GameObject destructionVFX;
+    [SerializeField] private SpawnableEvent audioEvent;
     private bool pickedUp;
+
 
     private void Start()
     {
@@ -24,6 +26,7 @@ public class PowerUpEvent : MonoBehaviour
     {
         if (!pickedUp)
         {
+            audioEvent.Invoke();
             Destroy(Instantiate(destructionVFX, transform.position, Quaternion.identity), 2);
         }
     }

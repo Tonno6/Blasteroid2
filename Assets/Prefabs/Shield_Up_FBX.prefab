@@ -279,3 +279,4 @@ MonoBehaviour:
   destroyDelay: 5
   destructionVFX: {fileID: 1329845292236604, guid: 14bfc68dc3519ca4e98c21dd9dcd54f0,
     type: 3}
+  audioEvent: {fileID: 11400000, guid: 59e8922012044814aae6fa616f531a0f, type: 2}
