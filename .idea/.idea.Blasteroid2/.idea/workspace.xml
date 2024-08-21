@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea18903-5c6e-46f7-b4c6-191c6cee49e6" name="Modifiche" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blasteroid2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/StarshipInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/StarshipInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/MAT_Shader_PowerUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/MAT_Shader_PowerUp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AsteroidContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AsteroidContainer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Asteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Asteroid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AsteroidChildren.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AsteroidChildren.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AsteroidManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AsteroidManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventScript/PowerUpEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventScript/PowerUpEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ImageBarCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstructionMenuScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StarshipController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4ea18903-5c6e-46f7-b4c6-191c6cee49e6" name="Modifiche" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +99,7 @@
       <workItem from="1723109764027" duration="4108000" />
       <workItem from="1723980036503" duration="1653000" />
       <workItem from="1724055149509" duration="4132000" />
+      <workItem from="1724236364919" duration="420000" />
     </task>
     <servers />
   </component>
