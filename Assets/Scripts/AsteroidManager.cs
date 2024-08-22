@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,7 +25,6 @@ public class AsteroidManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(IncreaseDifficulty());
         inactiveAsteroids = new Queue<Asteroid>();
 
         for (int i = 0; i < asteroidNumber; i++)
@@ -36,13 +34,6 @@ public class AsteroidManager : MonoBehaviour
             asteroidPool.Add(asteroid);
             inactiveAsteroids.Enqueue(asteroid);
         }
-    }
-
-    private IEnumerator IncreaseDifficulty()
-    {
-        difficultyLevel += 0.5f;
-        yield return new WaitForSeconds(30);
-        StartCoroutine(IncreaseDifficulty());
     }
 
     private Vector3 GetRandomSpawnPoint()
@@ -93,5 +84,10 @@ public class AsteroidManager : MonoBehaviour
     public Queue<Asteroid> GetInactiveAsteroids()
     {
         return inactiveAsteroids;
+    }
+
+    public void IncreaseDifficultyLevel()
+    {
+        difficultyLevel++;
     }
 }

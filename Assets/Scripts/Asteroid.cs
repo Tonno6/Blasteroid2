@@ -6,8 +6,8 @@ public class Asteroid : MonoBehaviour
     [SerializeField] private Vector2 sizeRange;
     [SerializeField] private float tumble;
     [SerializeField] private int hp = 1;
-    [SerializeField] private float difficultyLevel;
     [SerializeField] private AsteroidChildren children;
+    private float difficultyLevel;
     private float fallSpeed;
     private float size;
 
@@ -43,7 +43,7 @@ public class Asteroid : MonoBehaviour
 
     private void SetHp()
     {
-        hp = (int)((size * 2) + difficultyLevel);
+        hp = (int)((size * 2) + (difficultyLevel / 2));
         if (hp >= 10)
         {
             hp = 10;
